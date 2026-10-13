@@ -16,7 +16,13 @@
         "groups": [
           {
             "group": "Начало работы",
-            "pages": ["index", "quickstart", "authentication", "errors"]
+            "pages": [
+              "index",
+              "quickstart",
+              "authentication",
+              "errors",
+              "rate-limits"
+            ]
           }
         ]
       },
