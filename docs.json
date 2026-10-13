@@ -1,0 +1,42 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Tiny Tasks API",
+  "description": "Документация небольшого REST API для задач",
+  "colors": {
+    "primary": "#7C3AED",
+    "light": "#8B5CF6",
+    "dark": "#6D28D9"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Документация",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Начало работы",
+            "pages": ["index", "quickstart", "authentication"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "openapi": "openapi.yaml"
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Получить API-ключ",
+      "href": "mailto:hello@example.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/example/tiny-tasks-api"
+    }
+  }
+}

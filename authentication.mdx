@@ -1,0 +1,25 @@
+---
+title: "Аутентификация"
+description: "Как передавать API-ключ в запросах"
+icon: "key"
+---
+
+Tiny Tasks API использует Bearer-токены. Передавайте ключ в заголовке
+`Authorization` каждого запроса:
+
+```http
+Authorization: Bearer YOUR_API_KEY
+```
+
+Например:
+
+```bash
+curl https://api.example.com/v1/tasks \
+  --header 'Authorization: Bearer demo_test_123'
+```
+
+Если ключ отсутствует или недействителен, API вернёт `401 Unauthorized`.
+
+<Tip>
+  Храните ключ в переменной окружения, например `TINY_TASKS_API_KEY`.
+</Tip>

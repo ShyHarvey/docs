@@ -1,0 +1,61 @@
+---
+title: "Быстрый старт"
+description: "Создайте первую задачу через API"
+icon: "rocket"
+---
+
+## 1. Получите API-ключ
+
+Для примера будем использовать ключ `demo_test_123`.
+
+<Warning>
+  Не храните рабочие API-ключи в Git и клиентском JavaScript.
+</Warning>
+
+## 2. Создайте задачу
+
+<CodeGroup>
+```bash cURL
+curl --request POST \
+  --url https://api.example.com/v1/tasks \
+  --header 'Authorization: Bearer demo_test_123' \
+  --header 'Content-Type: application/json' \
+  --data '{"title":"Попробовать Mintlify"}'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.example.com/v1/tasks', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer demo_test_123',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ title: 'Попробовать Mintlify' }),
+});
+
+const task = await response.json();
+console.log(task);
+```
+</CodeGroup>
+
+Успешный ответ:
+
+```json
+{
+  "id": "task_01J9ZP8W3K",
+  "title": "Попробовать Mintlify",
+  "completed": false,
+  "createdAt": "2026-10-13T12:00:00Z"
+}
+```
+
+## 3. Получите список задач
+
+```bash
+curl https://api.example.com/v1/tasks \
+  --header 'Authorization: Bearer demo_test_123'
+```
+
+<Info>
+  Полные схемы запросов и ответов доступны во вкладке **API Reference**.
+</Info>
